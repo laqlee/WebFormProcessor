@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <h2 class="content-head is-center">Contact Us!</h2>
+  <h2 class="content-head">Contact Us</h2>
 
 <!-- START HERE -->
    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
@@ -22,19 +22,18 @@
     <div class="form-elements">
       <fieldset class="pure-group">
         <label for="name">Your Name:</label>
-        <input id="name" name="Name" placeholder="" />
+        <input id="name" name="name" placeholder="" />
       </fieldset>
 
       <fieldset class="pure-group">
         <label for="email">Your Email Address:</label>
-        <input id="email" name="Email" type="email" value=""
+        <input id="email" name="email" type="email" value=""
         required placeholder="your.name@email.com"/>
       </fieldset>
 
-      <fieldset class="pure-group">
-        <label for="message">Message: </label>
-        <textarea id="message" name="Message" rows="10"
-        placeholder=""></textarea>
+      <fieldset class="pure-group"
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="10" cols="100" placeholder=""></textarea>
       </fieldset>
 
       <fieldset class="pure-group honeypot-field" style="display: none">
@@ -42,8 +41,7 @@
         <input id="honeypot" type="text" name="honeypot" value="" />
       </fieldset>
 
-      <button class="button-success pure-button button-xlarge">
-        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+      <button class="button-success pure-button button-xlarge">Send</button>
     </div>
 
     <!-- Customise the Thankyou Message People See when they submit the form: -->
