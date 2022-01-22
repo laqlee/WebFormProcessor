@@ -56,14 +56,18 @@
 <!-- END -->
 
   <script>
-    function reqListener () {
-      console.log("responseText", this.responseText);
-    }
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', "https://script.google.com/macros/s/AKfycbzlS2hAs9lLBNZVte5GwXO1iVs6ZjGDF9vw7ULeA1gtD0wD3ga2XUbpayv3w96YaMgPjA/exec");
+      xhr.setRequestHeader("Content-Type", "application/json");
 
-    var oReq = new XMLHttpRequest();
-      oReq.addEventListener("load", reqListener);
-      oReq.open("GET", "https://script.google.com/macros/s/AKfycbzlS2hAs9lLBNZVte5GwXO1iVs6ZjGDF9vw7ULeA1gtD0wD3ga2XUbpayv3w96YaMgPjA/exec");
-      oReq.send();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          console.log("response:", this.response);
+          console.log("responseText:", this.responseText);
+        }
+      };
+      
+      xhr.send();
   </script>
 </body>
 </html>
