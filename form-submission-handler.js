@@ -62,13 +62,19 @@
     }
 
     disableAllButtons(form);
-    var url = form.action;
+    // var url = form.action;
+    var url = "https://script.google.com/macros/s/AKfycbxgG2Q3Kq3kmuBbpmYURNQNlH72CJbGn2_zhr5zrP4dlJLSQ609iEZdUqZufXCmayzFyg/exec";
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
     // xhr.withCredentials = true;
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
+          console.log("response:", this.response);
+          console.log("responseText:", this.responseText);
+          return;
+
+
           form.reset();
           var formElements = form.querySelector(".form-elements")
           if (formElements) {
