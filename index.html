@@ -55,8 +55,15 @@
   <script data-cfasync="false" src="form-submission-handler.js"></script>
 <!-- END -->
 
-  <form method="GET" action="https://script.google.com/macros/s/AKfycbzlS2hAs9lLBNZVte5GwXO1iVs6ZjGDF9vw7ULeA1gtD0wD3ga2XUbpayv3w96YaMgPjA/exec">
-    <button type="submit">Submit</button>
-  </form>
+  <script>
+    function reqListener () {
+      console.log("responseText", this.responseText);
+    }
+
+    var oReq = new XMLHttpRequest();
+      oReq.addEventListener("load", reqListener);
+      oReq.open("GET", "https://script.google.com/macros/s/AKfycbzlS2hAs9lLBNZVte5GwXO1iVs6ZjGDF9vw7ULeA1gtD0wD3ga2XUbpayv3w96YaMgPjA/exec");
+      oReq.send();
+  </script>
 </body>
 </html>
