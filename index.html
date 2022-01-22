@@ -55,11 +55,8 @@
   <script data-cfasync="false" src="form-submission-handler.js"></script>
 <!-- END -->
 
-  <script>
-    fetch('https://script.google.com/macros/s/AKfycbzlS2hAs9lLBNZVte5GwXO1iVs6ZjGDF9vw7ULeA1gtD0wD3ga2XUbpayv3w96YaMgPjA/exec')
-      .then(response => response.json())
-      .then(data => console.log('data:', data))
-      .catch(error => console.log('error:', error));
-  </script>
+  <form method="GET" action="https://script.google.com/macros/s/AKfycbzlS2hAs9lLBNZVte5GwXO1iVs6ZjGDF9vw7ULeA1gtD0wD3ga2XUbpayv3w96YaMgPjA/exec">
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
